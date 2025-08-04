@@ -175,34 +175,3 @@ spring.jpa.hibernate.ddl-auto=validate
 spring.jpa.show-sql=false
 logging.level.org.hibernate.SQL=WARN
 ```
-
-### Docker Support
-Create a `Dockerfile`:
-```dockerfile
-FROM openjdk:11-jre-slim
-COPY build/libs/*.jar app.jar
-EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "/app.jar"]
-```
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👥 Authors
-
-- **Your Name** - *Initial work* - [YourGitHub](https://github.com/yourusername)
-
-## 🙏 Acknowledgments
-
-- Spring Boot team for the excellent framework
-- PostgreSQL community for the robust database
-- OpenAPI/Swagger for API documentation tools

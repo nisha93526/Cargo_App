@@ -160,18 +160,3 @@ Run the test suite:
 ./gradlew test
 ```
 
-##  Monitoring & Logging
-
-- Application logs are configured to show SQL queries
-- Hibernate DDL is set to `update` for automatic schema management
-- JPA open-in-view is enabled for lazy loading support
-
-##  Deployment
-
-### Production Configuration
-For production deployment, update `application.properties`:
-```properties
-spring.jpa.hibernate.ddl-auto=validate
-spring.jpa.show-sql=false
-logging.level.org.hibernate.SQL=WARN
-```

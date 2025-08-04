@@ -1,0 +1,43 @@
+plugins {
+    id 'org.springframework.boot' version '2.7.18'
+    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+    id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // For building RESTful APIs
+    implementation ('org.springframework.boot:spring-boot-starter-web')
+
+    // For database interaction with JPA
+    implementation ('org.springframework.boot:spring-boot-starter-data-jpa')
+
+    // For input validation (provides jakarta.validation.constraints)
+    implementation('org.springframework.boot:spring-boot-starter-validation')
+
+    // --- LOMBOK DEPENDENCIES ---
+    implementation ('org.projectlombok:lombok')
+    // Specifies Lombok as an annotation processor
+    annotationProcessor ('org.projectlombok:lombok')
+    // ---------------------------
+    // For automatic Swagger/OpenAPI documentation
+    implementation 'org.springdoc:springdoc-openapi-ui:1.7.0'
+    // PostgreSQL database driver
+    runtimeOnly ('org.postgresql:postgresql')
+
+    // For unit and integration testing with JUnit and Mockito
+    testImplementation ('org.springframework.boot:spring-boot-starter-test')
+    // Also add Lombok for tests if needed
+    testAnnotationProcessor ('org.projectlombok:lombok')
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

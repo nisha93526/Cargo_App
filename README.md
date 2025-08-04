@@ -2,7 +2,7 @@
 
 A comprehensive cargo and freight management system built with Spring Boot, providing RESTful APIs for managing loads and bookings in the transportation industry.
 
-## 🚀 Features
+##  Features
 
 - **Load Management**: Create, update, retrieve, and manage cargo loads
 - **Booking System**: Handle transporter bookings for available loads
@@ -12,7 +12,7 @@ A comprehensive cargo and freight management system built with Spring Boot, prov
 - **Data Validation**: Comprehensive input validation and error handling
 - **Database Integration**: PostgreSQL with JPA/Hibernate
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 - **Framework**: Spring Boot 2.7.18
 - **Language**: Java 11
@@ -23,7 +23,7 @@ A comprehensive cargo and freight management system built with Spring Boot, prov
 - **Validation**: Bean Validation (JSR-303)
 - **Utilities**: Lombok
 
-## 📋 Prerequisites
+##  Prerequisites
 
 Before running this application, make sure you have the following installed:
 
@@ -31,7 +31,7 @@ Before running this application, make sure you have the following installed:
 - PostgreSQL 12 or higher
 - Gradle 7.0 or higher (or use the included Gradle wrapper)
 
-## 🔧 Installation & Setup
+##  Installation & Setup
 
 ### 1. Clone the Repository
 ```bash
@@ -64,13 +64,13 @@ gradle bootRun
 
 The application will start on `http://localhost:8080`
 
-## 📚 API Documentation
+##  API Documentation
 
 Once the application is running, access the interactive API documentation:
 
 **Swagger UI**: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 
-## 🏗️ Project Structure
+##  Project Structure
 
 ```
 src/
@@ -88,7 +88,7 @@ src/
 └── test/                     # Test files
 ```
 
-## 🔄 API Endpoints
+##  API Endpoints
 
 ### Load Management
 - `POST /load` - Create a new load
@@ -104,7 +104,7 @@ src/
 - `PUT /booking/{id}` - Update booking status
 - `DELETE /booking/{id}` - Delete booking
 
-## 📊 Data Models
+## Data Models
 
 ### Load Entity
 ```java
@@ -138,7 +138,7 @@ src/
 }
 ```
 
-## ⚡ Business Rules
+##  Business Rules
 
 1. **Load Status Management**:
    - New loads start with `POSTED` status
@@ -153,20 +153,20 @@ src/
 3. **Status Reversion**:
    - If all bookings are deleted/rejected, load status reverts to `POSTED`
 
-## 🧪 Testing
+##  Testing
 
 Run the test suite:
 ```bash
 ./gradlew test
 ```
 
-## 🔍 Monitoring & Logging
+##  Monitoring & Logging
 
 - Application logs are configured to show SQL queries
 - Hibernate DDL is set to `update` for automatic schema management
 - JPA open-in-view is enabled for lazy loading support
 
-## 🚀 Deployment
+##  Deployment
 
 ### Production Configuration
 For production deployment, update `application.properties`:
